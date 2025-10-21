@@ -1,0 +1,5 @@
+{
+  "name": "Lotería BoliCuba",
+  "description": "Una máquina de sorteo de lotería virtual que permite iniciar sorteos manuales para Pink 4 y Pink 3. La aplicación distingue entre sorteos de 'Mediodía' y 'Noche' y mantiene un historial persistente de los resultados.",
+  "requestFramePermissions": []
+}

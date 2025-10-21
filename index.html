@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotería BoliCuba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Lobster', cursive;
+      }
+      @keyframes shuffle {
+        from { transform: translateY(0); }
+        to { transform: translateY(-90%); } /* 10 items (0-9), so 9 steps down */
+      }
+      .animate-shuffle-fast {
+        animation: shuffle 0.075s steps(9, end) infinite;
+      }
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0) scale(1.0);
+        }
+        50% {
+          transform: translateY(-10px) scale(1.05);
+        }
+      }
+      @keyframes glow {
+        0%, 100% {
+          box-shadow: 0 0 15px rgba(253, 224, 71, 0.4), 0 0 25px rgba(253, 224, 71, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 25px rgba(253, 224, 71, 0.7), 0 0 40px rgba(253, 224, 71, 0.5);
+        }
+      }
+      .animate-bounce-glow {
+        animation: bounce 1.2s ease-in-out infinite, glow 1.8s ease-in-out infinite;
+      }
+      @keyframes glow-text {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(252, 211, 77, 0.7)) drop-shadow(0 0 8px rgba(252, 211, 77, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 8px rgba(245, 158, 11, 1)) drop-shadow(0 0 16px rgba(245, 158, 11, 0.8));
+        }
+      }
+      .animate-glow-text {
+        animation: glow-text 2.5s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
